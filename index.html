@@ -11,7 +11,7 @@
 
 
 <ul>
-  <lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert="announceDay(lesson, day)"></lesson-hider>
+  <lesson-hider remove="remove(index)" ng-repeat="lesson in lessons track by $index" lesson="lesson" index="$index" day-alert="announceDay(lesson, day)"></lesson-hider>
 </ul>
 
 <!-- <div>{{test}}</div> -->
