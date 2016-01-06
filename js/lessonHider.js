@@ -25,22 +25,15 @@ angular.module('directivePractice')
         // };
 
 
-				var toggle = true;
-				scope.click = function() {
-					if (toggle === true) {
-						element.css('text-decoration', 'none');
-						toggle = false;
-					} else if (toggle === false) {
-						element.css('text-decoration', 'line-through');
-					}
-				};
-
-        // scope.remove = function(index) {
-        //   scope.lessons.splice(indexOf(lesson),1);
-        //
-        //
-        // return scope.lessons;
-        // };
+        var toggle = true;
+        scope.click = function() {
+          if (toggle === true) {
+            element.css('text-decoration', 'none');
+            toggle = false;
+          } else if (toggle === false) {
+            element.css('text-decoration', 'line-through');
+          }
+        };
 
         scope.getSchedule.then(function(response) {
           scope.schedule = response.data;
